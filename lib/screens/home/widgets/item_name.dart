@@ -11,7 +11,16 @@ class ItemName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Column(
+      children: [
+        Text(this.itemName,
+            style: TextStyle(
+              fontSize: 10,
+            )),
+        Text(
+          this.itemModel,
+        ),
+      ],
+    );
   }
 }
