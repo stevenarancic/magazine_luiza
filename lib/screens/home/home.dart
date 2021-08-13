@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:magazine_luiza/screens/home/widgets/item_name.dart';
+import 'package:magazine_luiza/screens/home/widgets/price_tag.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -34,6 +35,10 @@ class _HomeState extends State<Home> {
                 itemModel: "Tela 6.7" " Câm. Quádrupla Câm. + Selfie 32MP",
               ),
             ],
+          ),
+          PriceTag(
+            priceTag: 1979.97,
+            numberOfInstallments: 10,
           ),
         ],
       ),
