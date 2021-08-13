@@ -10,7 +10,16 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("aaaaa"),
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset("assets/images/logo.jpg"),
+        ),
+        title: Text("Ofertas do dia"),
+      ),
+      body: Column(
+        children: [
+          Image.asset("assets/images/linha.jpg"),
+        ],
       ),
     );
   }
