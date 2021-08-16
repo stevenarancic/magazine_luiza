@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:magazine_luiza/screens/home/item_params.dart';
 import 'package:magazine_luiza/screens/home/item_params_filled.dart';
+import 'package:magazine_luiza/screens/home/text_style.dart';
 import 'package:magazine_luiza/screens/home/widgets/item_name.dart';
 import 'package:magazine_luiza/screens/home/widgets/price_tag.dart';
 
@@ -39,39 +40,23 @@ class _HomeState extends State<Home> {
                       children: [
                         Text(
                           item.anuncio,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: HomeTextStyles.anuncio,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 8),
                           child: Text(
                             item.descricao,
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 10,
-                              fontWeight: FontWeight.normal,
-                            ),
+                            style: HomeTextStyles.descricao,
                           ),
                         ),
                         Text(
                           item.preco,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 10,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: HomeTextStyles.preco,
                         ),
                         Text(
                           item.parcela,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 10,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        )
+                          style: HomeTextStyles.parcela,
+                        ),
                       ],
                     ),
                   ),
