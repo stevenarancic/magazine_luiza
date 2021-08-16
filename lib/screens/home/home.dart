@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:magazine_luiza/screens/home/item_params.dart';
 import 'package:magazine_luiza/screens/home/item_params_filled.dart';
 import 'package:magazine_luiza/screens/home/text_style.dart';
-import 'package:magazine_luiza/screens/home/widgets/item_name.dart';
 import 'package:magazine_luiza/screens/home/widgets/price_tag.dart';
 
 class Home extends StatefulWidget {
