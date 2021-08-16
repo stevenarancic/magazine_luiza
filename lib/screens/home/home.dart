@@ -28,10 +28,13 @@ class _HomeState extends State<Home> {
             return ListTile(
               title: Row(
                 children: [
-                  Container(
-                    height: 100,
-                    width: 100,
-                    child: Image.asset(item.foto),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      child: Image.asset(item.foto),
+                    ),
                   ),
                   Expanded(
                     child: Column(
