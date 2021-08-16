@@ -1,4 +1,4 @@
-import 'package:magazine_luiza/screens/home/item_params.dart';
+import 'package:magazine_luiza/screens/home/item_contents/item_params.dart';
 
 List<ItemParams> item_params_filled = [
   ItemParams(

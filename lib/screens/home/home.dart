@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:magazine_luiza/screens/home/item_params.dart';
-import 'package:magazine_luiza/screens/home/item_params_filled.dart';
+import 'package:magazine_luiza/screens/home/item_contents/item_params.dart';
+import 'package:magazine_luiza/screens/home/item_contents/item_params_filled.dart';
 import 'package:magazine_luiza/screens/home/text_style.dart';
-import 'package:magazine_luiza/screens/home/widgets/price_tag.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -63,7 +62,7 @@ class _HomeState extends State<Home> {
               ),
               trailing: IconButton(
                 icon: Icon(
-                  Icons.favorite,
+                  Icons.favorite_border,
                 ),
                 color: Colors.pink,
                 onPressed: () {},
