@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:magazine_luiza/screens/home/item_params.dart';
+import 'package:magazine_luiza/screens/home/item_params_filled.dart';
 import 'package:magazine_luiza/screens/home/widgets/item_name.dart';
 import 'package:magazine_luiza/screens/home/widgets/price_tag.dart';
 
@@ -18,30 +20,76 @@ class _HomeState extends State<Home> {
         ),
         title: Text("Ofertas do dia"),
       ),
-      body: Column(
-        children: [
-          Image.asset("assets/images/linha.jpg"),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Image.asset(
-                  "assets/images/celular.jpg",
-                  width: 90,
+      body: ListView.separated(
+          scrollDirection: Axis.vertical,
+          itemBuilder: (BuildContext context, int index) {
+            ItemParams item = item_params_filled.elementAt(index);
+
+            return ListTile(
+              title: Row(
+                children: [
+                  Container(
+                    height: 100,
+                    width: 100,
+                    child: Image.asset(item.foto),
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          item.anuncio,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 8),
+                          child: Text(
+                            item.descricao,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 10,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          item.preco,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 10,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        Text(
+                          item.parcela,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 10,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              trailing: IconButton(
+                icon: Icon(
+                  Icons.favorite,
                 ),
+                color: Colors.pink,
+                onPressed: () {},
               ),
-              ItemName(
-                itemName: "Smartphone Samsung Galaxy A71 128GB Azul 6GB RAM",
-                itemModel: "Tela 6.7" " Câm. Quádrupla Câm. + Selfie 32MP",
-              ),
-            ],
-          ),
-          PriceTag(
-            priceTag: 1979.97,
-            numberOfInstallments: 10,
-          ),
-        ],
-      ),
+            );
+          },
+          separatorBuilder: (BuildContext context, int index) {
+            return Divider();
+          },
+          itemCount: 7),
     );
   }
 }
