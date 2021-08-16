@@ -1,3 +1,4 @@
+import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:magazine_luiza/screens/home/item_contents/item_params.dart';
 import 'package:magazine_luiza/screens/home/item_contents/item_params_filled.dart';
@@ -60,12 +61,15 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              trailing: IconButton(
-                icon: Icon(
-                  Icons.favorite_border,
-                ),
-                color: Colors.pink,
-                onPressed: () {},
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FavoriteButton(
+                    isFavorite: false,
+                    iconSize: 35,
+                    valueChanged: (_isFavorite) {},
+                  ),
+                ],
               ),
             );
           },
